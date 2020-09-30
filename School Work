@@ -1,0 +1,160 @@
+import math
+
+# Function 6 -----------------------------------------------------
+def projectile_range(degrees, velocity):
+    """
+    Note: You have already solved this problem.  If not, a solution is given.
+
+    Complete the function that determines the range of a projectile
+    rounded to the nearest int using the Python round function
+         range = sin(2 * radians) * velocity**2 / gravity
+    Remember to convert the angle in degrees into the radian equivalent
+    Here is a solution to the same problem as a program with user input
+    and program output specified in Assignment 'Two Programs':
+
+# I)nput
+degrees = float(input('Takeoff angle (in degrees)? '))
+velocity = float(input('Initial velocity (meters per second)? '))
+
+# P)rocess
+radians = degrees * math.pi / 180
+meters = math.sin(2 * radians) * velocity*velocity / 9.8
+meters = round(meters, 2)
+
+# O)utput
+print('Range = ', meters, 'meters')
+    """
+    # TODO: complete this function
+    return -999.9   # bogus return that does not work
+
+
+# Test Code
+assert(projectile_range(90, 100) == 0.0)  # Launch straight up into the air
+assert(projectile_range(45, 100) == 1020.41)
+assert(projectile_range(45, 200) == 4081.63)
+assert(projectile_range(60, 200) == 3534.8)
+
+
+# Function 7 -----------------------------------------------------
+def in_lat(word):
+    """
+    Aoccdrnig to a rscheearch at an Elingsh uinervtisy, it deosn't mttaer
+    in waht oredr the ltteers in a wrod are, the olny iprmoetnt tihng
+    is taht frist and lsat ltteer is at the rghit pclae.
+        Create a function that will mix up the middle characters in
+    a 5 letter word. The precondition states the word must have exactly
+    5 letters. If the argument is a different len, the function will not work.
+        Assuming the letters are indexed as 0-1-2-3-4, they should end up in
+    the order 0-3-2-1-4. Your function will accept a 5-character string as an
+    argument and return a 5-character string reordered as described.
+      in_lat ("apple") returns "alppe"
+      in_lat ("gears") returns "gares"
+      in_lat ("prior") returns "piorr"
+      in_lat ("scone") returns "sonce"
+    Precondition len(word) == 5 exactly
+    """
+    # TODO: complete this function
+    return word[0:1]  # bogus return that does not work
+
+
+# Test Code
+assert(in_lat("apple") == "alppe")
+assert(in_lat("first") == "fsrit")
+assert(in_lat("habit") == "hibat")
+assert(in_lat("loose") == "lsooe")
+assert(in_lat("thing") == "tnihg")
+
+assert (in_lat('Quick') + " " + in_lat('brown') + " " + in_lat('foxes')
+        + " " + in_lat('jumps') == 'Qciuk bworn fexos jpmus')
+
+
+# Function 8 -----------------------------------------------------
+def close_to_ten(num):
+    """
+    Given a non-negative number "num", return true if num is
+    within 2 numbers of a multiple of 10.  Note: (a % b) is the remainder
+    of dividing a by b, so (7 % 5) is 2.
+      close_to_ten(12) returns true
+      close_to_ten(17) returns false
+      close_to_ten(19) returns true
+      close_to_ten(223) returns false
+    Precondition: num >=0
+    """
+    # TODO: complete this function
+    return not True   # bogus return that does not work
+
+
+# Test Code
+assert(not close_to_ten(7))
+assert(close_to_ten(8))
+assert(close_to_ten(9))
+assert(close_to_ten(10))
+assert(close_to_ten(11))
+assert(close_to_ten(12))
+assert(not close_to_ten(13))
+
+assert(not close_to_ten(217))
+assert(close_to_ten(218))
+assert(close_to_ten(220))
+assert(close_to_ten(222))
+assert(not close_to_ten(223))
+
+
+# Function 9 -----------------------------------------------------
+def like_6(a, b):
+    """
+    The number 6 is a truly great number. Given two int values, a and b, return
+    true if either one is 6. Or if their sum or difference is 6. Note: the
+    def abs(num) computes the absolute value of a number.
+      like_6(6, 4) return true
+      like_6(4, 5) return false
+      like_6(1, 5) return true
+    """
+    # TODO: complete this function
+    return not True  # bogus return that does not work
+
+
+# Test Code
+assert(like_6(6, 6))
+assert(like_6(6, 5))
+assert(not like_6(5, 5))
+assert(like_6(1, 5))  # sum is 6
+assert(like_6(9, 3))  # difference is 6
+assert(like_6(110, 116))
+assert(like_6(110, 104))
+assert(not like_6(9, 2))
+
+
+
+
+# Function 10 -----------------------------------------------------
+def is_leap_year(year):
+    """
+     Complete function isLeapYear that returns true if the integer
+     argument represents a leap year. A leap year is a positive integer
+     that is evenly divisible by 4 except the last year of a century,
+     which are those years evenly divisible by 100. These must also be
+     divisible by 400. 2000 was a leap year and 2100 will not be even
+     though 2100 is evenly divisible by 4.
+       isLeapYear(2008) returns true
+       isLeapYear(2009) returns false
+       isLeapYear(2000) returns true
+       isLeapYear(2100) returns false
+    Precondition: year >= 1582
+    """
+    # TODO: complete this function
+    return not True  # bogus return that does not work
+
+
+# Test Code:
+assert(is_leap_year(2020))
+assert(not is_leap_year(2021))
+assert(not is_leap_year(2022))
+assert(not is_leap_year(2023))
+assert(is_leap_year(2024))
+assert(is_leap_year(2000))
+assert(not is_leap_year(2100))
+assert(not is_leap_year(2200))
+assert(not is_leap_year(2300))
+assert(is_leap_year(2400))
+
